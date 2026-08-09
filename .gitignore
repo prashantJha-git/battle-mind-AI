@@ -1,8 +1,21 @@
+# --- Python bytecode / cache ---
 __pycache__/
 *.pyc
+
+# --- Virtual environments ---
 .venv/
 venv/
+
+# --- Trained AI model (generated artifact, not source) ---
 model.npy
+
+# --- IDE / editor settings ---
 .idea/
 .vscode/
+
+# --- Logs ---
 *.log
+
+# --- OS junk files ---
+.DS_Store
+Thumbs.db
