@@ -1,0 +1,102 @@
+"""GAME AND AI CONFIGURATION"""
+
+# --- Screen ---
+SCREEN_WIDTH = 1000
+SCREEN_HEIGHT = 600
+FPS = 60
+FLOOR_Y = SCREEN_HEIGHT - 110
+
+# --- Palette ---
+WHITE = (245, 245, 250)
+BLACK = (10, 10, 15)
+
+RED = (220, 40, 40)
+YELLOW = (255, 210, 60)
+GREEN = (80, 220, 120)
+
+INK = (18, 20, 28)
+INK_SOFT = (28, 31, 43)
+BORDER = (90, 96, 120)
+ACCENT = (86, 196, 255)
+ACCENT_WARM = (255, 138, 76)
+MUTED_TEXT = (176, 182, 200)
+
+HP_HIGH = (96, 224, 128)
+HP_MID = (255, 200, 64)
+HP_LOW = (232, 64, 64)
+HP_TRACK = (20, 20, 24)
+HP_SEGMENT_BORDER = (0, 0, 0)
+NAME_GOLD = (255, 214, 110)
+
+# --- Fonts ---
+FONT_CANDIDATES = ["bahnschrift", "segoeuisemibold", "arialrounded", "arial", "dejavusans"]
+
+# --- Fighters ---
+# Row order in every sprite sheet: [idle, run, jump, attack1, attack2, hit, death]
+SPRITE_SCALE = 2.2
+
+PLAYER_SPRITE = "assets/images/player/sprites/player.png"
+PLAYER_FRAME_SIZE = 100
+PLAYER_ANIMATION_STEPS = [2, 4, 1, 4, 4, 3, 3]
+
+AI_SPRITE = "assets/images/ai/sprites/ai.png"
+AI_FRAME_SIZE = 131
+AI_ANIMATION_STEPS = [7, 3, 1, 5, 4, 4, 3]
+
+BACKGROUND_IMAGE = "assets/images/background/background.png"
+
+ATTACK_SFX = "assets/audio/attack.wav"
+MUSIC_FILE = "assets/audio/music.mp3"
+
+# --- Reinforcement learning ---
+STATE_SIZE = 12
+ACTION_SIZE = 6
+LEARNING_RATE = 0.01
+
+TRAIN_EVERY_STEPS = 20
+
+MODEL_FILE = "model.npy"
+
+EXPLORATION_START = 0.35
+EXPLORATION_MIN = 0.02
+EXPLORATION_DECAY = 0.995
+
+# Reward shaping
+DAMAGE_DEALT_REWARD = 1.8
+DAMAGE_TAKEN_PENALTY = 1.3
+IDLE_PENALTY = 0.18
+ROUND_WIN_BONUS = 24.0
+ROUND_LOSS_PENALTY = 9.0
+
+MOVE_TOWARDS_REWARD = 0.14
+MOVE_AWAY_PENALTY = 0.09
+
+SUCCESSFUL_ATTACK_REWARD = 5.0
+SUCCESSFUL_HEAVY_ATTACK_REWARD = 10.0
+MISSED_ATTACK_PENALTY = 0.25
+MISSED_HEAVY_ATTACK_PENALTY = 0.8
+
+MAX_STEPS_PER_ROUND = 1800  # ~30s at 60 FPS
+
+# --- Attacks ---
+ATTACK_RANGE = 150
+
+LIGHT_ATTACK_DAMAGE = 10
+LIGHT_ATTACK_RECOVERY_FRAMES = 14
+
+HEAVY_ATTACK_DAMAGE = 18
+HEAVY_ATTACK_RECOVERY_FRAMES = 26
+
+HEAVY_ATTACK_COOLDOWN_FRAMES = 90  # ~1.5s at 60 FPS
+
+RECOVERY_FRAMES = LIGHT_ATTACK_RECOVERY_FRAMES  # legacy alias
+
+# --- Adaptive AI speed ---
+AI_DELAY_MIN = 1
+AI_DELAY_MAX = 3
+AI_DELAY_DEFAULT = 2
+REACTION_SAMPLE_WINDOW = 20
+REACTION_SMOOTHING = 0.9
+
+# --- HUD feel ---
+HEALTH_BAR_LERP_SPEED = 0.12

@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+model.npy
+.idea/
+.vscode/
+*.log
