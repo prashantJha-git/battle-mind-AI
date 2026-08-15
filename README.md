@@ -14,6 +14,19 @@ The goal of this project is to practice key game-dev and machine-learning concep
 - Persisting and reloading trained weights across sessions
 
 ---
+```
+# PLAY NOW
+```
+
+Want To jump straight in without setting up Python or any dependencies? Download the playable build from itch.io, extract the zip, and run it:
+
+https://aahan-chaturvedi.itch.io/battlemind
+
+This deployed, playable build was put together by [Aahan Chaturvedi](https://github.com/Aahan-Chaturvedi), who worked on this project as a collaborator.
+
+If you'd rather run the game from source (e.g. to tweak the RL agent, reward shaping, or bring your own assets), follow the "How to Run" instructions further down this page instead.
+
+---
 
 ```
 # Project Description
